@@ -172,11 +172,37 @@ class Berkas extends CI_Controller {
     }
     
     ////PENGEMBALIAN BERKAS-------------------->/////////
-    function pengembalian ($id_pelamar){
-        $data['berkas_dasar'] = $this->Berkas_m->berkas_dasar($id_pelamar);
-        $this->load->view('pelamar/pengembalian_berkas', $data);
+//    function pengembalian ($id_pelamar){
+//        $data['berkas_dasar'] = $this->Berkas_m->berkas_dasar($id_pelamar);
+//        $this->load->view('pelamar/pengembalian_berkas', $data);
+//    }
+//    
+//    function update_pengembalian() {
+//        $id_pelamar = $this->input->post('id_pelamar');
+//        $kilang = $this->input->post('kilang');
+//        $berkas = $this->input->post('dasar[]');
+//        foreach ($berkas as $b) {
+//            $data = array(
+//                "tanggal_keluar_$b" => date('Y-m-d')
+//            );
+//            $this->Berkas_m->update_berkas_dasar_db($data, $id_pelamar);
+//        }
+//        redirect("Berkas/bukti_ambil_berkas/$id_pelamar/$kilang");
+//    }
+
+    //--> BUKTI PENGEMBALIAN BERKAS
+    function bukti_ambil_berkas($id_pelamar, $kilang) {
+        $data['kilang'] = $kilang;
+        $data['data'] = $this->Berkas_m->bukti_ambil($id_pelamar);
+        $this->load->view('pelamar/bukti_ambil_berkas', $data);
     }
     
+    ////PENGEMBALIAN BERKAS-------------------->/////////
+    function pengembalian($id_pelamar) {
+        $data['berkas_dasar'] = $this->Berkas_m->berkas_dasar($id_pelamar);
+        $data['perusahaan'] = $this->Perusahaan_m->select_perusahaan_lowongan();
+        $this->load->view('pelamar/pengembalian_berkas', $data);
+    }
     function update_pengembalian() {
         $id_pelamar = $this->input->post('id_pelamar');
         $kilang = $this->input->post('kilang');
@@ -187,12 +213,10 @@ class Berkas extends CI_Controller {
             );
             $this->Berkas_m->update_berkas_dasar_db($data, $id_pelamar);
         }
-        redirect("Berkas/bukti_ambil_berkas/$id_pelamar/$kilang");
+        redirect("Berkas/bukti_pengambilan/$id_pelamar/$kilang");
     }
-
-    //--> BUKTI PENGEMBALIAN BERKAS
-    function bukti_ambil_berkas($id_pelamar, $kilang) {
-        $data['kilang'] = $kilang;
+    function bukti_pengambilan($id_pelamar, $kilang) {
+        $data['kilang'] = $this->Berkas_m->kilang($kilang);
         $data['data'] = $this->Berkas_m->bukti_ambil($id_pelamar);
         $this->load->view('pelamar/bukti_ambil_berkas', $data);
     }

@@ -21,15 +21,7 @@
                             <input type="hidden" name="id_pelamar" value="<?php echo $berkas_dasar->id_pelamar ?>">
 
                             <div class="control-group">
-                                <label class="control-label">Nama Perusahaan</label>
-                                <div class="controls">
-                                    <input type="text" name="kilang" placeholder="Tulis nama Perusahaan..." class="span2 m-warp">
-<!--                                    <textarea class="span8" ></textarea>-->
-                                </div>
-                            </div>
-                            <div class="control-group">
                                 <label class="control-label">Berkas Dasar</label>
-
                                 <div class="controls">
 
                                     <?php
@@ -58,6 +50,21 @@
 
                                     <?php } ?>
 
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <label class="control-label">Kilang</label>
+                                <div class="controls">
+                                    <!--<input name="kilang" type="text" class="span4 m-wrap">-->
+                                    <select class="span4" name="kilang">
+                                        <option>--Pilih Nama Perusahaan--</option>
+                                        <?php foreach ($perusahaan as $row) { ?>
+                                            <option
+                                                value="<?php echo $row->id_perusahaan; ?>"><?php echo $row->nama_perusahaan; ?>
+                                            </option>
+                                        <?php } ?>
+                                    </select>
+                                    
                                 </div>
                             </div>
 

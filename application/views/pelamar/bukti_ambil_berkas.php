@@ -19,7 +19,7 @@
                 <div class="row"><br>
                     <div class="col-sm-12"><br>
                         <p>Yang bertanda tangan di bawah ini :</p>
-                        <p>Nama :</p>
+                        <p>Nama : _______________________________________</p>
                         <p>Atas nama PT. SUKSES MANDIRI UTAMA, telah mengembalikan Dokumen / Berkas kepada Calon Pekerja Migran Indonesia :</p>
                     </div>
                     <div class="col-sm-12">
@@ -44,7 +44,7 @@
                                     <td>:</td>
                                     <td></td> 
                                     <td></td> 
-                                    <td>  <?php echo $kilang; ?></td>
+                                    <td>  <?php echo $kilang->nama_perusahaan; ?></td>
                                 </tr>
                             </thead>
                         </table>
@@ -76,7 +76,7 @@
                         </div>
                     <?php } ?>
                     <div class="col-sm-12"><br>
-                        <p>Semua Dokumen yang digunakan untuk Proses, telah kami Serahkan kepada dan Diterima yang bersangkutan pada Tanggal<a href=""></a></p>
+                        <p>Semua Dokumen yang digunakan untuk Proses, telah kami Serahkan kepada dan Diterima yang bersangkutan pada Tanggal ______________________________</p>
                         <p>Setelah semua dokumen kami serahkan SELANJUTNYA BUKAN MENJADI TANGGUNG JAWAB PT. SUKSES MANDIRI UTAMA.</p>
                     </div>
                     <div class="col-sm-12">

@@ -3,7 +3,7 @@
 <div id="content">
     <div id="content-header">
         <div id="breadcrumb"> <a href="#" title="Go to Home" class="tip-bottom"><i class="icon-home"></i> Home</a> <a href="#">Data Pengiriman</a> <a href="#" class="current">Pengiriman</a> </div>
-        <h1>Daftar Dokumen yang Harus Dikirim</h1>
+        <h1>Daftar Dokumen yang Dikirim</h1>
     </div>
     <div class="container-fluid">
         <div class="row-fluid">

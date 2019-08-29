@@ -3,7 +3,7 @@
 <div id="content">
     <div id="content-header">
         <div id="breadcrumb"> <a href="#" title="Go to Home" class="tip-bottom"><i class="icon-home"></i> Home</a> <a href="#">Data Keberangkatan</a> <a href="#" class="current">Pelamar</a> </div>
-        <h1>Data Keberangkatan Pelamar</h1>
+        <h1>Data Keberangkatan Calon Pekerja</h1>
     </div>
     <div class="container-fluid">
         <div class="row-fluid">

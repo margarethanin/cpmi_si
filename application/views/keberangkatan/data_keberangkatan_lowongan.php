@@ -3,7 +3,7 @@
 <div id="content">
     <div id="content-header">
         <div id="breadcrumb"> <a href="#" title="Go to Home" class="tip-bottom"><i class="icon-home"></i> Home</a> <a href="#">Data Keberangkatan</a> <a href="#" class="current">Lowongan</a> </div>
-        <h1>Data Keberangkatan Lowongan</h1>
+        <h1>Data Keberangkatan Berdasarkan Lowongan</h1>
     </div>
     <div class="container-fluid">
         <div class="row-fluid">
@@ -45,7 +45,7 @@
                                             <td><?php echo $row->permintaan_lowongan; ?></td>
                                             <td>
                                                 <p> <a href="<?php echo site_url("Endorsement/data_keberangkatan_pelamar/$row->id_lowongan"); ?>"
-                                                       class="btn btn-success">Daftar Pelamar Berangkat</a>
+                                                       class="btn btn-success">Daftar Calon Pekerja yang Berangkat</a>
                                                 </p>
                                             </td>
                                         </tr>
